@@ -21,21 +21,25 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 #define DIODE_DIRECTION ROW2COL
-#define MATRIX_ROWS 6
-#define MATRIX_COLS 12
-#define COL_EXPANDED { true, true, true, true, true, true, false, false, false, false, false, false}
-#define MATRIX_ONBOARD_ROW_PINS { F0, F1, F4, F5, F6, F7 }
-#define MATRIX_ONBOARD_COL_PINS { 0, 0, 0, 0, 0, 0, B1, B2, B3, D2, D3, C6 }
+#define MATRIX_ROWS 5
+#define MATRIX_COLS 10
+#define COL_EXPANDED { true, true, true, true, true, false, false, false, false, false}
+#define MATRIX_ONBOARD_ROW_PINS { F7, F6, F5, F4, F1 }
+#define MATRIX_ONBOARD_COL_PINS { 0, 0, 0, 0, 0, B1, B2, B3, D2, D3 }
 #define EXPANDER_COL_REGISTER GPIOA
 #define EXPANDER_ROW_REGISTER GPIOB
-#define MATRIX_EXPANDER_COL_PINS {0, 1, 2, 3, 4, 5}
-#define MATRIX_EXPANDER_ROW_PINS {0, 1, 2, 3, 4, 5}
+#define MATRIX_EXPANDER_COL_PINS {0, 1, 2, 3, 4}
+#define MATRIX_EXPANDER_ROW_PINS {0, 1, 2, 3, 4}
 
 #define MOUSEKEY_INTERVAL     20
 #define MOUSEKEY_DELAY        0
 #define MOUSEKEY_TIME_TO_MAX  60
 #define MOUSEKEY_MAX_SPEED    7
 #define MOUSEKEY_WHEEL_DELAY  0
+
+#define TAPPING_TOGGLE 1
+
+#define TAPPING_TERM 200
 
 /* key combination for command */
 #define IS_COMMAND() ( \
@@ -45,3 +49,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* fix space cadet rollover issue */
 #define DISABLE_SPACE_CADET_ROLLOVER
+
+//#define DEBOUNCE 15
+//#define USB_MAX_POWER_CONSUMPTION 500
